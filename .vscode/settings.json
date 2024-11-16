@@ -11,5 +11,14 @@
       "url": "https://cdn.jsdelivr.net/npm/tsup/schema.json",
       "fileMatch": ["package.json", "tsup.config.json"]
     }
-  ]
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  }
 }

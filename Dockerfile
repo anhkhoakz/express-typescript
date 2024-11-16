@@ -1,4 +1,4 @@
-FROM node:22.11.0-slim
+FROM node:20-bullseye-slim
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -19,4 +19,4 @@ RUN npm run build
 EXPOSE 8080
 
 # Start the app
-CMD npm run start
+CMD [ "npm", "run", "start" ]
