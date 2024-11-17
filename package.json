@@ -1,9 +1,9 @@
 {
   "name": "express-typescript-boilerplate",
-  "version": "1.0.14",
+  "version": "1.0.0",
   "description": "An Express boilerplate backend",
-  "author": "Edwin Hernandez",
-  "repository": "edwinhern/express-typescript-2024",
+  "author": "anhkhoakz",
+  "repository": "anhkhoakz/express-typescript",
   "license": "MIT",
   "main": "index.ts",
   "private": true,
@@ -33,7 +33,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "^1.9.4",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/supertest": "^6.0.2",

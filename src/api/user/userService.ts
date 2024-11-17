@@ -16,7 +16,8 @@ export class UserService {
   async findAll(): Promise<ServiceResponse<User[] | null>> {
     try {
       const users = await this.userRepository.findAllAsync();
-      if (!users || users.length === 0) {
+      const isUsersEmpty: boolean = !users || users.length === 0;
+      if (isUsersEmpty) {
         return ServiceResponse.failure("No Users found", null, StatusCodes.NOT_FOUND);
       }
       return ServiceResponse.success<User[]>("Users found", users);
@@ -35,10 +36,11 @@ export class UserService {
   async findById(id: number): Promise<ServiceResponse<User | null>> {
     try {
       const user = await this.userRepository.findByIdAsync(id);
-      if (!user) {
+      const isUserEmpty: boolean = !user;
+      if (isUserEmpty) {
         return ServiceResponse.failure("User not found", null, StatusCodes.NOT_FOUND);
       }
-      return ServiceResponse.success<User>("User found", user);
+      return ServiceResponse.success<User>("User found", user as User);
     } catch (ex) {
       const errorMessage = `Error finding user with id ${id}:, ${(ex as Error).message}`;
       logger.error(errorMessage);
